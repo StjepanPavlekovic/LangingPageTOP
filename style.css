@@ -7,6 +7,8 @@
     --min-content-width: 600px;
 
     --section-height: 465px;
+
+    --max-section-width: 1023px;
 }
 
 * {
@@ -35,6 +37,7 @@ nav {
     display: flex;
     width: var(--content-width);
     min-width: var(--min-content-width);
+    max-width: --max-section-width;
 }
 
 nav ul {
@@ -71,7 +74,17 @@ section {
     display: flex;
     width: var(--content-width);
     min-width: var(--min-content-width);
+    max-width: --max-section-width;
     gap: 10px;
+    justify-content: center;
+}
+
+.col {
+    flex-direction: column;
+}
+
+.row {
+    flex-direction: row;
 }
 
 .content-left {
@@ -128,6 +141,7 @@ button:hover {
 
 #second {
     background-color: var(--secondary-color);
+    align-items: flex-start;
 }
 
 #third {
@@ -138,9 +152,105 @@ button:hover {
     background-color: var(--secondary-color);
 }
 
-.content {
+/* .content {
     width: var(--content-width);
     min-width: var(--min-content-width);
+} */
+
+#second > .section-content {
+    align-items: center;
+}
+
+#second h2 {
+    font-size: 36px;
+    font-weight: 900;
+    color: #1f2937;
+    padding: 40px;
+}
+
+#second p {
+    text-align: center;
+    color: #858585;
+    margin-top: 8px;
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 120px;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 48px;
+}
+
+.card {
+    width: 170px;
+}
+
+.image {
+    height: 170px;
+    width: inherit;
+    border: 4px solid #4b8ef9;
+    border-radius: 17px;
+}
+
+#third .section-content {
+    max-width: 824px;
+}
+
+#third p {
+    font-size: 36px;
+    font-style: italic;
+    font-weight: 300;
+}
+
+#third span {
+    display: inline-block;
+    align-self: flex-end;
+    font-size: 24px;
+    color: #333;
+    font-weight: bold;
+}
+
+.cta-container {
+    width: 100%;
+    height: 170px;
+    display: flex;
+    background-color: #4b8ef9;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.cta-inner {
+    width: 80%;
+    max-width: 824px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.cta-left {
+    display: flex;
+    flex-direction: column;
+}
+
+.cta-left h3 {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--secondary-color);
+}
+
+.cta-left p {
+    font-size: 18px;
+    color: var(--text-secondary-color);
+}
+
+.cta-inner button {
+    border: 2px solid var(--text-secondary-color);
+    margin-left: auto;
 }
 
 footer {
